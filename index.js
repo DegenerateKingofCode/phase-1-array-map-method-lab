@@ -10,7 +10,18 @@ const tutorials = [
   'what is the difference between event capturing and bubbling?',
   'what is JSONP?'
 ];
+// Edit tutorials so first letter in each string is capitalized. 
+ // let tutorials = 
+const outsideFunction = string => {
+  let newArray = string.split(" ")
+  let newArray2 = newArray.map(element => element[0].toUpperCase() + element.slice(1))
+  return newArray2.join(' ')
+}
+
 
 const titleCased = () => {
-  return tutorials
+  let tutorials2 = tutorials.map(element => outsideFunction(element))
+  return tutorials2
+ 
+
 }
